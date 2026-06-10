@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipos de Fútbol</title>
+<style>
+body { font-family: Arial, sans-serif; background: #e8f5e9; padding: 20px; }
+.container { max-width: 600px; margin: 0 auto; }
+.card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+input, button { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+button { background: #2e7d32; color: white; border: none; cursor: pointer; font-weight: bold; }
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #2e7d32; color: white; }
+h2 { color: #2e7d32; }
+h3 { color: #388e3c; }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>⚽ Panel de Equipos de Fútbol (MongoDB Atlas)</h2>
+<div class="card">
+<h3>Registrar Equipo</h3>
+<form id="formEquipo">
+<input type="text" id="nombre" placeholder="Nombre del equipo" required>
+<input type="text" id="pais" placeholder="País de origen" required>
+<input type="number" id="titulos" placeholder="Número de títulos" required>
+<button type="submit">Guardar en la Nube ⚽</button>
+</form>
+</div>
+<div class="card">
+<h3>Equipos Registrados</h3>
+<table>
+<thead>
+<tr><th>Equipo</th><th>País</th><th>Títulos</th></tr>
+</thead>
+<tbody id="tabla"></tbody>
+</table>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
